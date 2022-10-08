@@ -23,12 +23,12 @@ namespace Dungeon
                     if (chests.Contains(path.Value))
                         yield return path;
 
-                    Step(map, queue, path);
+                    TakeStep(map, queue, path);
                 }
             }
         }
 
-        private static void Step(Map map, Queue<SinglyLinkedList<Point>> queue, SinglyLinkedList<Point> path)
+        private static void TakeStep(Map map, Queue<SinglyLinkedList<Point>> queue, SinglyLinkedList<Point> path)
         {
             for (var dy = -1; dy <= 1; dy++)
             {
